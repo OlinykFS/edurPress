@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Frijole';
+  src: url('/fonts/optimized_frijole.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Exo';
+  src: url('/fonts/optimized_exo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-item {
+    @apply hover:bg-gray-200 hover:text-orange-600 h-full flex items-center px-3 py-2 transition-all duration-300 text-[18px];
+  }
+}
+
+html, body, button, input, select, textarea, p, h1, h2, h3, h4, h5, h6, a, ul, ol, li, dl, dd, dt, blockquote, figure, fieldset, legend, table, th, td, caption, hr, div, span, img, form {
+  @apply font-exo;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+.recharts-surface {
+  overflow: visible !important;
+}
+
+.recharts-wrapper {
+  overflow: visible !important;
+}
+
+.recharts-layer {
+  overflow: visible !important;
+}
